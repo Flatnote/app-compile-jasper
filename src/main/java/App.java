@@ -20,12 +20,11 @@ public class App {
         String projectPath = "/Users/chalernchai.jin/acm-tmn-tax/TaxEJB/src/main/resources/report/";
 
         List<String> stringList = new ArrayList<String>();
-        stringList.add("TAX_T101");
-        stringList.add("TAX_T101_List");
+        stringList.add("TAX_T102_List_Detail");
 
         InputStream inputStream = null;
         for (String strReport : stringList) {
-            File file = new File(staticPath + strReport + ".jrxml");
+            File file = new File(projectPath + strReport + ".jrxml");
             inputStream = new FileInputStream(file);
             JasperReport jasperReport = JasperCompileManager
                     .compileReport(inputStream);
